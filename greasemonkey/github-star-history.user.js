@@ -3,10 +3,12 @@
 // @description         Adds star history chart to sidebar of GitHub repos
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2023.8.18.3
+// @version             2023.8.18.4
 // @license             MIT
 // @icon                https://github.githubassets.com/favicons/favicon.png
 // @match               *://github.com/*
+// @homepageURL         https://github.com/adamlui/github-star-history
+// @supportURL          https://github.com/adamlui/github-star-history/issues
 // ==/UserScript==
 
 (async () => {
