@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name                GitHub Star History ⭐
-// @description         Adds star history graph to sidebar of GitHub repos
+// @description         Adds star history chart to sidebar of GitHub repos
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2023.8.18.2
+// @version             2023.8.18.3
 // @license             MIT
 // @icon                https://github.githubassets.com/favicons/favicon.png
 // @match               *://github.com/*
