@@ -1,4 +1,4 @@
-name: Sync /greasemonkey/ to adamlui/userscripts/github-star-history/
+name: Sync /greasemonkey/ to adamlui/userscripts/github/github-star-history/
 
 on:
   push:
@@ -44,11 +44,11 @@ jobs:
             fi
           done
 
-      - name: Sync /greasemonkey/ to adamlui/userscripts/github-star-history/
+      - name: Sync /greasemonkey/ to adamlui/userscripts/github/github-star-history/
         run: |
           rsync -avhr --delete \
             ${{ github.workspace }}/adamlui/github-star-history/greasemonkey/ \
-            ${{ github.workspace }}/adamlui/userscripts/github-star-history/
+            ${{ github.workspace }}/adamlui/userscripts/github/github-star-history/
 
       - name: Push to adamlui/github-star-history
         uses: stefanzweifel/git-auto-commit-action@v4
@@ -67,5 +67,5 @@ jobs:
           add_options: '--all'
           commit_user_email: auto-sync@kudoai.com
           commit_message: '${{ github.event.head_commit.message }} ↞ [auto-sync from `adamlui/github-star-history`]'
-          file_pattern: 'github-star-history/**'
+          file_pattern: 'github/github-star-history/**'
           repository: adamlui/userscripts
