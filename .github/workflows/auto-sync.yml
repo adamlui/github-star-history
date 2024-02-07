@@ -3,7 +3,7 @@ name: Sync /greasemonkey/ to adamlui/userscripts/github/github-star-history/
 on:
   push:
     branches: main
-    paths: '**'
+    paths: "**"
 
 jobs:
   build:
@@ -57,19 +57,19 @@ jobs:
       - name: Push to adamlui/github-star-history
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          push_options: '--force'
-          add_options: '--all'
+          push_options: --force
+          add_options: --all
           commit_user_email: auto-sync@kudoai.com
-          commit_message: '${{ github.event.head_commit.message }} ↞ [auto-sync from `adamlui/github-star-history`]'
-          file_pattern: '**'
+          commit_message: "${{ github.event.head_commit.message }} ↞ [auto-sync from `adamlui/github-star-history`]"
+          file_pattern: "**"
           repository: adamlui/github-star-history
 
       - name: Push to adamlui/userscripts
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          push_options: '--force'
-          add_options: '--all'
+          push_options: --force
+          add_options: --all
           commit_user_email: auto-sync@kudoai.com
-          commit_message: '${{ github.event.head_commit.message }} ↞ [auto-sync from `adamlui/github-star-history`]'
-          file_pattern: 'github/github-star-history/**'
+          commit_message: "${{ github.event.head_commit.message }} ↞ [auto-sync from `adamlui/github-star-history`]"
+          file_pattern: "github/github-star-history/**"
           repository: adamlui/userscripts
