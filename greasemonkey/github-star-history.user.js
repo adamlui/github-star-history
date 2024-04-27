@@ -374,15 +374,15 @@
     }
 
     function getUserAndRepoOfCurrentPage() {
-        const githubUrlRegex = /github\.com\/(?<user>[\w\-]+)\/(?<repo>[\w\-._]+)\/?/
+        const githubUrlRegex = /github\.com\/(?<user>[\w-]+)\/(?<repo>[\w.-]+)\/?/
         const currentUrl = window.location.href
 
-        const match = currentUrl.match(githubUrlRegex)
-        if (!match) {
+        const groups = githubUrlRegex.exec(currentUrl)?.groups
+        if (!groups?.user || !groups?.repo) {
             throw new Error(`Invalid Github repository URL: ${currentUrl}`)
         }
 
-        return match.groups
+        return groups
     }
 
     async function insertStarHistory() {
