@@ -12,7 +12,7 @@ jobs:
     steps:
 
       - name: Checkout adamlui/github-star-history
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           token: ${{ secrets.REPO_SYNC_PAT }}
           repository: adamlui/github-star-history
@@ -20,7 +20,7 @@ jobs:
           fetch-depth: 2
 
       - name: Checkout adamlui/userscripts
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           token: ${{ secrets.REPO_SYNC_PAT }}
           repository: adamlui/userscripts
