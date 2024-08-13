@@ -69,22 +69,20 @@ jobs:
             ${{ github.workspace }}/adamlui/github-star-history/greasemonkey/ \
             ${{ github.workspace }}/adamlui/userscripts/github/github-star-history/
 
-      - name: Push to adamlui/github-star-history
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          push_options: --force
-          add_options: --all
-          commit_user_email: auto-sync@kudoai.com
-          commit_message: "${{ github.event.head_commit.message }} ↞ [auto-sync from `${{ steps.sync_docs.outputs.sync_src }}`]"
-          file_pattern: "**"
-          repository: adamlui/github-star-history
+      - name: Push changes to adamlui/github-star-history
+        run: |
+          cd ${{ github.workspace }}/adamlui/github-star-history
+          git config --global user.name "kudo-sync-bot"
+          git config --global user.email "auto-sync@kudoai.com"
+          git add .
+          git commit -n -m "${{ github.event.head_commit.message }} ↞ [auto-sync from `${{ steps.sync_docs.outputs.sync_src }}`]" || true
+          git push
 
-      - name: Push to adamlui/userscripts
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          push_options: --force
-          add_options: --all
-          commit_user_email: auto-sync@kudoai.com
-          commit_message: "${{ github.event.head_commit.message }} ↞ [auto-sync from `adamlui/github-star-history`]"
-          file_pattern: "github/github-star-history/**"
-          repository: adamlui/userscripts
+      - name: Push changes to adamlui/userscripts
+        run: |
+          cd ${{ github.workspace }}/adamlui/userscripts
+          git config --global user.name "kudo-sync-bot"
+          git config --global user.email "auto-sync@kudoai.com"
+          git add .
+          git commit -n -m "${{ github.event.head_commit.message }} ↞ [auto-sync from `adamlui/github-star-history`]" || true
+          git push
