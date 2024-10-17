@@ -1,0 +1,10 @@
+{
+  "name": "GitHub Star History", "symbol": "⭐",
+  "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
+  "urls": {
+    "gitHub": "https://github.com/adamlui/github-star-history",
+    "greasyFork": "https://greasyfork.org/scripts/473377-github-star-history",
+    "review": { "greasyFork": "https://greasyfork.org/scripts/473377-github-star-history#post-discussion" },
+    "support": "https://github.com/adamlui/github-star-history/issues"
+  }
+}
