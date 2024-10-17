@@ -414,7 +414,7 @@
   </g>
 </svg>
 `
-        const title = `Star History`
+        const title = 'Star History'
         const buttonHtml = `<button id="zoomStarHistory" data-show-dialog-id="repo-delete-menu-dialog" type="button"
 data-view-component="true"
 class="btn btn-sm tooltipped tooltipped-s">
