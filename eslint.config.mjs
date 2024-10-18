@@ -18,7 +18,7 @@ export default [
         },
         languageOptions: {
             ecmaVersion: 'latest', sourceType: 'script',
-            globals: { ...globals.browser, ...globals.greasemonkey }
+            globals: { ...globals.browser, ...globals.greasemonkey, chatgpt: 'readonly' }
         }
     },
     { files: ['**/*.mjs'], languageOptions: { sourceType: 'module' }},
