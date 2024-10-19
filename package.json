@@ -1,5 +1,11 @@
 {
+  "author": {
+    "name": "Adam Lui",
+    "email": "adam@kudoai.com",
+    "url": "https://github.com/adamlui"
+  },
   "homepage": "https://github.com/adamlui/github-star-history",
+  "license": "MIT",
   "funding": [
     {
       "type": "github",
