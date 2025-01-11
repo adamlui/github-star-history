@@ -3,7 +3,10 @@ name: Sync greasemonkey/ to adamlui/userscripts/github/github-star-history/
 on:
   push:
     branches: [main]
-    paths: ["**", "!.*", "!package*.json", "!eslint.config*"]
+    paths: ["**", "!.*"]
+
+permissions:
+  contents: write
 
 jobs:
   build:
