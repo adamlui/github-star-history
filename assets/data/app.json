@@ -1,5 +1,5 @@
 {
-  "name": "GitHub Star History", "symbol": "⭐",
+  "name": "GitHub Star History", "symbol": "⭐", "slug": "github-star-history",
   "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
   "urls": {
     "gitHub": "https://github.com/adamlui/github-star-history",
