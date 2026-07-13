@@ -1,6 +1,6 @@
 {
   "name": "GitHub Star History", "symbol": "⭐", "slug": "github-star-history",
-  "author": { "name": "Adam Lui", "url": "https://github.com/adamlui" },
+  "author": { "name": "Adam Lui", "url": "https://github.com/adamlui", "email": "adam@kudoai.com" },
   "urls": {
     "github": "https://github.com/adamlui/github-star-history",
     "review": { "scriptcat": "https://scriptcat.org/script-show-page/7016/comment" },
