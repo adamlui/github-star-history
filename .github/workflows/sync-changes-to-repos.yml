@@ -1,4 +1,4 @@
-name: Sync greasemonkey/ to adamlui/userscripts/github/github-star-history/
+name: Sync /greasemonkey to adamlui/userscripts/github-star-history/
 
 on:
   push:
@@ -30,7 +30,7 @@ jobs:
           repository: adamlui/userscripts
           path: adamlui/userscripts
 
-      - name: Sync docs between root & greasemonkey/
+      - name: Sync docs between / & /greasemonkey
         run: |
           shopt -s globstar
           cd ${{ github.workspace }}/adamlui/github-star-history
@@ -51,11 +51,11 @@ jobs:
 
           echo "SYNC_SRC=$sync_src" >> $GITHUB_ENV # for commit msg in self-push step
 
-      - name: Sync greasemonkey/ to adamlui/userscripts/github/github-star-history/
+      - name: Sync /greasemonkey to adamlui/userscripts/github-star-history/
         run: |
           rsync -avhc --delete \
             ${{ github.workspace }}/adamlui/github-star-history/greasemonkey/ \
-            ${{ github.workspace }}/adamlui/userscripts/github/github-star-history/
+            ${{ github.workspace }}/adamlui/userscripts/github-star-history/
 
       - name: Escape backticks in commit msg
         env:
